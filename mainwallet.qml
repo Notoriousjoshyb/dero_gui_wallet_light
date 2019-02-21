@@ -13,6 +13,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import QtQuick 2.6
 import QtQuick.Controls 2.0
+import QtQuick.Controls.Material 2.0
+import QtQuick.Controls.Universal 2.0
 
 Page {
     id: page
@@ -90,6 +92,11 @@ Page {
                 Button {
 
                     text: "Send Transaction"
+                    Material.foreground: '#ffffff'
+                    Material.background: '#727c88'
+                    //Material.background: "transparent"
+                    Material.elevation: 2
+
 
                     // isDefault: true
                     onClicked: {
@@ -138,6 +145,10 @@ Page {
 
                 Button {
                     text: "Cancel"
+                    Material.foreground: '#ffffff'
+                    Material.background: '#727c88'
+                    //Material.background: "transparent"
+                    Material.elevation: 2
                     onClicked: {
                         validatetemporarypasswordpopop.close()
                     }
@@ -201,6 +212,7 @@ Page {
                         wrapMode: Label.Wrap
                         horizontalAlignment: Qt.AlignHCenter
                         text: "SEND DERO to another user"
+                        color: '#ffffff'
                     }
 
                     Rectangle {
@@ -214,6 +226,7 @@ Page {
                         wrapMode: Label.Wrap
                         // horizontalAlignment: Qt.AlignHCenter
                         text: "Destination Address"
+                        color: '#ffffff'
                     }
 
                     TextField {
@@ -264,6 +277,7 @@ Page {
                         wrapMode: Label.Wrap
                         //horizontalAlignment: Qt.AlignHCenter
                         text: "Amount (in DERO)"
+                        color: '#ffffff'
                     }
 
                     TextField {
@@ -294,6 +308,7 @@ Page {
                         wrapMode: Label.Wrap
                         // horizontalAlignment: Qt.AlignHCenter
                         text: "Payment ID (16 or 64 hex characters) Optional"
+                        color: '#ffffff'
                     }
 
                     TextField {
@@ -328,6 +343,10 @@ Page {
                         Button {
 
                             text: "Send NOW"
+                            Material.foreground: '#ffffff'
+                            Material.background: '#727c88'
+                            //Material.background: "transparent"
+                            Material.elevation: 2
                             anchors.horizontalCenter: parent.horizontalCenter
                             // isDefault: true
                             onClicked: {
@@ -356,6 +375,11 @@ Page {
                         Button {
 
                             text: "Donate"
+                            Material.foreground: '#ffffff'
+                            Material.background: '#727c88'
+                            //Material.background: "transparent"
+                            Material.elevation: 2
+
                             anchors.right: parent.right
                             // isDefault: true
                             // anchors.horizontalCenter: Qt.AlignRight
@@ -495,6 +519,10 @@ property int curPos
                             anchors.verticalCenter: parent.verticalCenter
                             // horizontalAlignment: Qt.AlignHCenter
                             text: "copy"
+                            Material.foreground: '#ffffff'
+                            Material.background: '#727c88'
+                            //Material.background: "transparent"
+                            Material.elevation: 2
 
                             /*  icon.color: "transparent" // not available in 5.8
                               icon.source: "qrc:/images/copy.svg"
@@ -520,6 +548,10 @@ property int curPos
                     Button {
 
                         text: "Generate Address with Payment ID (Integrated Address)"
+                        Material.foreground: '#ffffff'
+                        Material.background: '#727c88'
+                        //Material.background: "transparent"
+                        Material.elevation: 2
                         anchors.horizontalCenter: parent.horizontalCenter
                         // isDefault: true
                         onClicked: {
@@ -538,6 +570,10 @@ property int curPos
                             anchors.verticalCenter: parent.verticalCenter
                             // horizontalAlignment: Qt.AlignHCenter
                             text: "copy"
+                            Material.foreground: '#ffffff'
+                            Material.background: '#727c88'
+                            //Material.background: "transparent"
+                            Material.elevation: 2
                             /*  icon.color: "transparent" // not available in 5.8
                               icon.source: "qrc:/images/copy.svg"
                           */
@@ -573,6 +609,10 @@ property int curPos
                             anchors.verticalCenter: parent.verticalCenter
                             // horizontalAlignment: Qt.AlignHCenter
                             text: "copy"
+                            Material.foreground: '#ffffff'
+                            Material.background: '#727c88'
+                            //Material.background: "transparent"
+                            Material.elevation: 2
                             /*  icon.color: "transparent" // not available in 5.8
                               icon.source: "qrc:/images/copy.svg"
                           */
@@ -693,6 +733,10 @@ property int curPos
 
                         id: reloadhistorybutton
                         text: "Reload transaction history"
+                        Material.foreground: '#ffffff'
+                        Material.background: '#727c88'
+                        //Material.background: "transparent"
+                        Material.elevation: 2
                         anchors.horizontalCenter: parent.horizontalCenter
                         // isDefault: true
                         onClicked: {
@@ -867,13 +911,20 @@ property int curPos
 
     footer: Column {
 
+
+
         TabBar {
             id: tabBar
             currentIndex: swipeView.currentIndex
             width: parent.width
 
+
             TabButton {
                 text: "Send"
+                Material.foreground: '#000000'
+                Material.background: '#727c88'
+                //Material.background: "transparent"
+                Material.elevation: 2
                 onClicked: {
                     titleLabel.text = "Send DERO"
                     console.log(tabBar.height)
@@ -881,20 +932,36 @@ property int curPos
             }
             TabButton {
                 text: "Receive"
+                Material.foreground: '#000000'
+                Material.background: '#727c88'
+                //Material.background: "transparent"
+                Material.elevation: 2
                 // onClicked: {  titleLabel.text = "Receive DERO" }
             }
             TabButton {
                 text: "History"
+                Material.foreground: '#000000'
+                Material.background: '#727c88'
+                //Material.background: "transparent"
+                Material.elevation: 2
                 // onClicked: {  titleLabel.text = "Transaction History" }
             }
             TabButton {
                 text: "About"
+                Material.foreground: '#000000'
+                Material.background: '#727c88'
+                //Material.background: "transparent"
+                Material.elevation: 2
                 // onClicked: {  titleLabel.text = "DERO Balance" }
             }
             TabButton {
 
                 //    text: "Donate"
                 text: "Smart Contracts/Assets"
+                Material.foreground: '#000000'
+                Material.background: '#727c88'
+                //Material.background: "transparent"
+                Material.elevation: 2
             }
         }
 
